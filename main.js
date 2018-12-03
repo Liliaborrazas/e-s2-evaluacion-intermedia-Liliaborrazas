@@ -1,20 +1,36 @@
 'use strict'
-const introduce = document.querySelector('#write');
+const introduce = document.querySelector('#escribe');
 const btn = document.querySelector('.btn');
 const number = document.querySelector('.number');
 const text = document.querySelector('.text');
+const textIn = document.querySelector('.textIn');
 
-
+//funnction random
 function dameElRandom(num){
     return Math.floor(Math.random()*num);       
 };
 const resultadoRandom = dameElRandom(100);
 console.log(resultadoRandom);
 
+//boton prueba
+function pulsar(evento){
+   introduce.innerHTML =  introduce.value;
+btn.addEventListener('click', pulsar);
+
+ }
+ console.log(pulsar)
+/////////////////////////////////////////
+
+if(introduce === resultadoRandom){
+    console.log("haz ganado")
+}
 
 
-// 1. crear una maquetación mínima con el input, el botón, el espacio para feedback y el espacio para el contador de intentos
-// 2. generar un número aleatorio con la ayuda de Math.random y Math.ceil, y mostrarlo por la consola (podéis usar la función de este codepen)
+ 
+ 
+
+
+
 // 3. al pulsar el botón de prueba, acceder al contenido del input y mostrarlo en la consola
 // 4. comparar el número que el usuario ha escrito en el input con el número aleatorio, y pintar el
 // feedback correspondiente en la pantalla ("demasiado alto", "demasiado bajo", "¡HAS GANADO, CAMPEONA!")
