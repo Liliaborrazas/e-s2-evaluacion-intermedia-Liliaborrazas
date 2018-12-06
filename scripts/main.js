@@ -1,33 +1,32 @@
 'use strict';
-const introduce = document.querySelector('#escribe');
+const introduce = document.querySelector('#introduce');
 const btn = document.querySelector('.btn');
 const number = document.querySelector('.number');
 const text = document.querySelector('.text');
 const textIn = document.querySelector('.textIn');
 
 //funnction random
-function dameElRandom(num){
+function getRandom(num){
     return Math.floor(Math.random()*num);       
 };
-const resultadoRandom = dameElRandom(100);
-console.log(resultadoRandom);
+const resultRandom = getRandom(100);
+console.log(resultRandom);
 
+
+function test(e){
+    console.log(introduce.value)
+
+}
 //boton prueba
-function pulsar(evento){
-   introduce.innerHTML =  introduce.value;
-btn.addEventListener('click', pulsar);
+btn.addEventListener('click', test)
 
- }
- console.log(pulsar)
+
+
 /////////////////////////////////////////
 
-if(introduce === resultadoRandom){
+if(introduce === resultRandom){
     console.log("haz ganado")
 }
-
-
- 
- 
 
 
 

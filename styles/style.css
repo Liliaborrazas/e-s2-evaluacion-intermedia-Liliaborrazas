@@ -1,0 +1,19 @@
+.btn{
+    background:yellow;
+    color: deeppink;
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 15px;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color:black;
+}
+.introduce{
+    border: 2px solid deeppink;
+    height: 50px;
+    display: block;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
