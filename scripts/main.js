@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 const introduce = document.querySelector('#escribe');
 const btn = document.querySelector('.btn');
 const number = document.querySelector('.number');
