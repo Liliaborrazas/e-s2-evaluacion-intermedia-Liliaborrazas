@@ -5,33 +5,45 @@ const number = document.querySelector('.number');
 const text = document.querySelector('.text');
 const textIn = document.querySelector('.textIn');
 
+
 //funnction random
 function getRandom(num){
     return Math.floor(Math.random()*num);       
 };
 const resultRandom = getRandom(100);
-console.log(resultRandom);
+console.log(`El número aleatorio es: ${resultRandom}`);
+
+//contador a 0
+let counter = 0;
+number.innerHTML = counter;
 
 
-function test(e){
-    console.log(introduce.value)
+
+function test(){
+  console.log('click');
+  const user = parseInt(introduce.value);
+  console.log(resultRandom, user)
+
+  if(user === resultRandom){
+      textIn.innerHTML =' ¡¡¡Has ganado!!!';
+  }else if(user > resultRandom){
+      textIn.innerHTML = 'Te has pasado';
+      counter+=1
+      number.innerHTML = counter;
+  }else{
+      textIn.innerHTML = 'Te has quedado corto';
+      counter+=1
+      number.innerHTML = counter;
+
+  }
+
 
 }
-//boton prueba
-btn.addEventListener('click', test)
+btn.addEventListener('click', test);
 
 
 
-/////////////////////////////////////////
-
-if(introduce === resultRandom){
-    console.log("haz ganado")
-}
 
 
 
-// 3. al pulsar el botón de prueba, acceder al contenido del input y mostrarlo en la consola
-// 4. comparar el número que el usuario ha escrito en el input con el número aleatorio, y pintar el
-// feedback correspondiente en la pantalla ("demasiado alto", "demasiado bajo", "¡HAS GANADO, CAMPEONA!")
-// 5. actualizar el contador de intentos cada vez que el usuario pruebe
-// ¡A jugar!
+

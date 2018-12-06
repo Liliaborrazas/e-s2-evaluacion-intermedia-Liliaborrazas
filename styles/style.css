@@ -17,3 +17,11 @@ body{
     margin-bottom: 50px;
     margin-top: 20px;
 }
+.textIn{
+    font-size: 30px;
+}
+.number{
+    font-size: 50px;
+    color:deeppink;
+
+}
